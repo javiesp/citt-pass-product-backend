@@ -28,7 +28,7 @@ export class ProductController {
 
   @Patch('/update-product/:id')
   @MessagePattern('updateProduct')
-  updateProduct(payload) { 
+  update(payload) { 
     console.log(payload) 
     return this.productService.updateProduct(payload.id, payload.updateProductDto);
   }
